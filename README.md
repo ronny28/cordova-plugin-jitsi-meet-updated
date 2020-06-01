@@ -77,13 +77,25 @@ jitsiplugin.join(options.domain, options.roomId, options, function (data) {
     //CONFERENCE_FINISHED
     //CONFERENCE_DESTROYED
     if (data === "CONFERENCE_TERMINATED") {
+        // call finished
         jitsiplugin.destroy(function (data) {
-            // call finished
+            // plugin destroyed
         }, function (err) {
             console.log(err);
         });
     }
 }, function (err) {
+    console.log(err);
+});
+
+jitsiplugin.finish( (callback) => {
+    // call finished
+    jitsiplugin.destroy(function (data) {
+        // plugin destroyed
+    }, function (err) {
+        console.log(err);
+    });
+}, (err) => {
     console.log(err);
 });
 ```
