@@ -1,4 +1,4 @@
-# cordova-plugin-jitsi
+# cordova-plugin-jitsi-meet-updated
 Cordova plugin for Jitsi Meet React Native SDK. Works with both iOS and Android, and fixes the 64-bit binary dependency issue with Android found in previous versions of this plugin.
 
 # Summary 
@@ -10,7 +10,7 @@ The original repo is here: https://github.com/sumeetchhetri/cordova-plugin-jitsi
 ## iOS Installation
 On iOS/Xcode you will need to manually specify the WebRTC and JitsiMeet frameworks manually to be embedded.
 
-Example of how to select them here: https://github.com/ronny28/cordova-plugin-jitsi-meet-updated/xcode-ios-framework-embed-example.png
+Example of how to select them here: https://github.com/ronny28/cordova-plugin-jitsi-meet-updated/blob/master/xcode-ios-framework-embed-example.png
 
 # Add Activity to AndroidManifest.xml manually or using 
 ```
@@ -39,13 +39,11 @@ Example of how to select them here: https://github.com/ronny28/cordova-plugin-ji
 
 # Usage
 ```
-const roomId = 'your-custom-room-id';
-
 const options = {
-    domain: 'https://yourdomain.com',
-    subject: 'meeting-subject',
-    roomId: 'meeting-id',
-    roomPwd: 'meeting-password',
+    domain: 'https://meet.jit.si/',
+    subject: 'room-subject',
+    roomId: 'your-custom-room-id',
+    roomPwd: 'your-custom-room-password',
     audioOnly: false,
     audioMuted: false,
     videoMuted: false,
@@ -72,7 +70,7 @@ const options = {
     token: ''
 };
 
-jitsiplugin.join('https://meet.jit.si/', roomId, options, function (data) {
+jitsiplugin.join(options.domain, options.roomId, options, function (data) {
     //CONFERENCE_WILL_JOIN
     //CONFERENCE_JOINED
     //CONFERENCE_TERMINATED
