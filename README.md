@@ -49,8 +49,8 @@ const options = {
     videoMuted: false,
     userInfo: {
         displayName: 'user-display-name',
-        email: 'user-email-address',
-        avatar: 'user-avatar'
+        email: 'user-email-id',
+        avatar: 'user-avatar-url'
     },
     chatEnable: true,
     inviteEnable: false,
