@@ -4,6 +4,9 @@ Cordova plugin for Jitsi Meet React Native SDK. Works with both iOS and Android,
 # Summary 
 The original repo is here: https://github.com/sumeetchhetri/cordova-plugin-jitsi
 
+# Requirements
+Need to set MinSdk to 21 for Android only in config.xml
+
 # Installation
 `cordova plugin add https://github.com/ronny28/cordova-plugin-jitsi-meet-updated.git`
 
